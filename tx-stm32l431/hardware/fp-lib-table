@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name 00-local)(type KiCad)(uri ${KIPRJMOD}/00-local.pretty)(options "")(descr ""))
+  (lib (name emitter)(type KiCad)(uri ${KIPRJMOD}/emitter.pretty)(options "")(descr ""))
+)

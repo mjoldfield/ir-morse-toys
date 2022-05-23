@@ -1,0 +1,517 @@
+EESchema Schematic File Version 5
+EELAYER 36 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Connection ~ 1850 5500
+Connection ~ 1900 6450
+Connection ~ 1950 2000
+Connection ~ 2100 5500
+Connection ~ 2200 5500
+Connection ~ 2200 6450
+Connection ~ 2250 3600
+Connection ~ 2300 5500
+Connection ~ 2300 6450
+Connection ~ 2550 2700
+Connection ~ 2700 6450
+Connection ~ 3150 5500
+Connection ~ 5500 3100
+Connection ~ 5550 3100
+Connection ~ 6050 3100
+Connection ~ 6500 3100
+Connection ~ 6500 3600
+Connection ~ 6600 2650
+Connection ~ 6900 2350
+Connection ~ 6900 3600
+Connection ~ 7000 3600
+Connection ~ 7200 3000
+Connection ~ 8550 3000
+Wire Wire Line
+	1300 5500 1300 5950
+Wire Wire Line
+	1300 5500 1400 5500
+Wire Wire Line
+	1300 6350 1300 6450
+Wire Wire Line
+	1300 6450 1900 6450
+Wire Wire Line
+	1700 5500 1850 5500
+Wire Wire Line
+	1850 5400 1850 5500
+Wire Wire Line
+	1850 5500 2100 5500
+Wire Wire Line
+	1900 6450 2200 6450
+Wire Wire Line
+	1950 1750 1950 2000
+Wire Wire Line
+	1950 2000 1950 2500
+Wire Wire Line
+	1950 2000 2550 2000
+Wire Wire Line
+	1950 2700 2550 2700
+Wire Wire Line
+	1950 2900 1950 3600
+Wire Wire Line
+	1950 3600 2250 3600
+Wire Wire Line
+	2100 5500 2100 5650
+Wire Wire Line
+	2100 5500 2200 5500
+Wire Wire Line
+	2200 5500 2300 5500
+Wire Wire Line
+	2200 5900 2200 5500
+Wire Wire Line
+	2200 6100 2200 6450
+Wire Wire Line
+	2200 6450 2300 6450
+Wire Wire Line
+	2250 3600 2550 3600
+Wire Wire Line
+	2250 3650 2250 3600
+Wire Wire Line
+	2300 5350 2300 5500
+Wire Wire Line
+	2300 5500 2400 5500
+Wire Wire Line
+	2300 6450 2300 6550
+Wire Wire Line
+	2300 6450 2700 6450
+Wire Wire Line
+	2550 2000 2550 2200
+Wire Wire Line
+	2550 2400 2550 2700
+Wire Wire Line
+	2550 2700 2550 2950
+Wire Wire Line
+	2550 3250 2550 3600
+Wire Wire Line
+	2700 3100 3150 3100
+Wire Wire Line
+	2700 6450 2700 5800
+Wire Wire Line
+	2700 6450 3150 6450
+Wire Wire Line
+	3000 5500 3150 5500
+Wire Wire Line
+	3150 5500 3150 5900
+Wire Wire Line
+	3150 5500 3450 5500
+Wire Wire Line
+	3150 6450 3150 6100
+Wire Wire Line
+	3450 5500 3450 5400
+Wire Wire Line
+	4800 3100 5200 3100
+Wire Wire Line
+	5400 3100 5500 3100
+Wire Wire Line
+	5500 3100 5550 3100
+Wire Wire Line
+	5500 3250 5500 3100
+Wire Wire Line
+	5500 3450 5500 3600
+Wire Wire Line
+	5500 3600 6500 3600
+Wire Wire Line
+	5550 2350 6900 2350
+Wire Wire Line
+	5550 2700 5550 2350
+Wire Wire Line
+	5550 2900 5550 3100
+Wire Wire Line
+	5550 3100 5700 3100
+Wire Wire Line
+	5900 3100 6050 3100
+Wire Wire Line
+	6050 2650 6050 3100
+Wire Wire Line
+	6050 3100 6150 3100
+Wire Wire Line
+	6150 2650 6050 2650
+Wire Wire Line
+	6350 2650 6600 2650
+Wire Wire Line
+	6350 3100 6500 3100
+Wire Wire Line
+	6500 3100 6500 3200
+Wire Wire Line
+	6500 3100 6600 3100
+Wire Wire Line
+	6500 3400 6500 3600
+Wire Wire Line
+	6500 3600 6900 3600
+Wire Wire Line
+	6600 2650 6600 2900
+Wire Wire Line
+	6600 2650 7200 2650
+Wire Wire Line
+	6900 2200 6900 2350
+Wire Wire Line
+	6900 2350 6900 2750
+Wire Wire Line
+	6900 3250 6900 3600
+Wire Wire Line
+	6900 3600 7000 3600
+Wire Wire Line
+	7000 3600 8550 3600
+Wire Wire Line
+	7000 3700 7000 3600
+Wire Wire Line
+	7200 2650 7200 3000
+Wire Wire Line
+	7200 3000 7550 3000
+Wire Wire Line
+	7750 3000 8550 3000
+Wire Wire Line
+	8550 2900 8550 3000
+Wire Wire Line
+	8550 3100 8550 3600
+Wire Notes Line
+	800  1300 3800 1300
+Wire Notes Line
+	800  4100 800  1300
+Wire Notes Line
+	800  4100 3800 4100
+Wire Notes Line
+	800  4900 800  6800
+Wire Notes Line
+	800  4900 4000 4900
+Wire Notes Line
+	3800 1300 3800 4100
+Wire Notes Line
+	4000 6800 800  6800
+Wire Notes Line
+	4000 6800 4000 4900
+Wire Notes Line
+	4100 1300 4100 4100
+Wire Notes Line
+	4100 4100 9700 4100
+Wire Notes Line
+	9700 1300 4100 1300
+Wire Notes Line
+	9700 4100 9700 1300
+Text Notes 800  6900 0    50   ~ 0
+POWER SUPPLY\n
+Text Notes 850  4200 0    50   ~ 0
+SENSOR
+Text Notes 4100 4200 0    50   ~ 0
+FILTER AND AMPLIFIER
+Text GLabel 3150 3100 2    50   Input ~ 0
+SENSOR_OUT
+Text GLabel 4800 3100 0    50   Input ~ 0
+SENSOR_OUT
+$Comp
+L power:+5V #PWR03
+U 1 1 5BFFF17F
+P 1950 1750
+F 0 "#PWR03" H 1950 1600 50  0001 C CNN
+F 1 "+5V" H 1965 1923 50  0000 C CNN
+F 2 "" H 1950 1750 50  0001 C CNN
+F 3 "" H 1950 1750 50  0001 C CNN
+	1    1950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 5C059BBB
+P 3450 5400
+F 0 "#PWR05" H 3450 5250 50  0001 C CNN
+F 1 "+5V" H 3465 5573 50  0000 C CNN
+F 2 "" H 3450 5400 50  0001 C CNN
+F 3 "" H 3450 5400 50  0001 C CNN
+	1    3450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5C08ED3B
+P 2300 5350
+F 0 "#FLG01" H 2300 5425 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 5524 50  0000 C CNN
+F 2 "" H 2300 5350 50  0001 C CNN
+F 3 "~" H 2300 5350 50  0001 C CNN
+	1    2300 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5C0A0EC8
+P 2300 6550
+F 0 "#FLG02" H 2300 6625 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 6723 50  0000 C CNN
+F 2 "" H 2300 6550 50  0001 C CNN
+F 3 "~" H 2300 6550 50  0001 C CNN
+	1    2300 6550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5C058CFB
+P 1900 6450
+F 0 "#PWR02" H 1900 6200 50  0001 C CNN
+F 1 "GND" H 1905 6277 50  0000 C CNN
+F 2 "" H 1900 6450 50  0001 C CNN
+F 3 "" H 1900 6450 50  0001 C CNN
+	1    1900 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5C067C13
+P 2250 3650
+F 0 "#PWR04" H 2250 3400 50  0001 C CNN
+F 1 "GND" H 2255 3477 50  0000 C CNN
+F 2 "" H 2250 3650 50  0001 C CNN
+F 3 "" H 2250 3650 50  0001 C CNN
+	1    2250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5BFEF774
+P 7000 3700
+F 0 "#PWR07" H 7000 3450 50  0001 C CNN
+F 1 "GND" H 7005 3527 50  0000 C CNN
+F 2 "" H 7000 3700 50  0001 C CNN
+F 3 "" H 7000 3700 50  0001 C CNN
+	1    7000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5C1E7B5A
+P 2550 2300
+F 0 "R1" H 2600 2350 50  0000 L CNN
+F 1 "110k" H 2600 2250 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 2550 2300 50  0001 C CNN
+F 3 "~" H 2550 2300 50  0001 C CNN
+	1    2550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5BFF4DFF
+P 5500 3350
+F 0 "R2" H 5550 3400 50  0000 L CNN
+F 1 "110k" H 5550 3300 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3350 50  0001 C CNN
+F 3 "~" H 5500 3350 50  0001 C CNN
+	1    5500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5BFF4D92
+P 5550 2800
+F 0 "R3" H 5609 2846 50  0000 L CNN
+F 1 "110k" H 5609 2755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5550 2800 50  0001 C CNN
+F 3 "~" H 5550 2800 50  0001 C CNN
+	1    5550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5BFF3E9C
+P 5800 3100
+F 0 "R4" V 5900 3150 50  0000 C CNN
+F 1 "110k" V 6000 3200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5800 3100 50  0001 C CNN
+F 3 "~" H 5800 3100 50  0001 C CNN
+	1    5800 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5BFF3DC3
+P 6250 3100
+F 0 "R5" V 6446 3100 50  0000 C CNN
+F 1 "110k" V 6355 3100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6250 3100 50  0001 C CNN
+F 3 "~" H 6250 3100 50  0001 C CNN
+	1    6250 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP_Small C6
+U 1 1 5BFF8512
+P 7650 3000
+F 0 "C6" V 7875 3000 50  0000 C CNN
+F 1 "100u" V 7784 3000 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7650 3000 50  0001 C CNN
+F 3 "~" H 7650 3000 50  0001 C CNN
+	1    7650 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5C05BC2D
+P 2200 6000
+F 0 "C1" H 2292 6046 50  0000 L CNN
+F 1 "100n" H 2292 5955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D10.0mm_W2.5mm_P5.00mm" H 2200 6000 50  0001 C CNN
+F 3 "~" H 2200 6000 50  0001 C CNN
+	1    2200 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5C05BDC8
+P 3150 6000
+F 0 "C2" H 3242 6046 50  0000 L CNN
+F 1 "100n" H 3242 5955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D10.0mm_W2.5mm_P5.00mm" H 3150 6000 50  0001 C CNN
+F 3 "~" H 3150 6000 50  0001 C CNN
+	1    3150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5BFF40B6
+P 5300 3100
+F 0 "C3" V 5071 3100 50  0000 C CNN
+F 1 "100nF" V 5162 3100 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D10.0mm_W2.5mm_P5.00mm" H 5300 3100 50  0001 C CNN
+F 3 "~" H 5300 3100 50  0001 C CNN
+	1    5300 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5BFF404B
+P 6250 2650
+F 0 "C4" V 6021 2650 50  0000 C CNN
+F 1 "1n" V 6112 2650 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L10.0mm_W5.0mm_P5.00mm_P7.50mm" H 6250 2650 50  0001 C CNN
+F 3 "~" H 6250 2650 50  0001 C CNN
+	1    6250 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5BFF3F98
+P 6500 3300
+F 0 "C5" H 6592 3346 50  0000 L CNN
+F 1 "1n" H 6592 3255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L10.0mm_W5.0mm_P5.00mm_P7.50mm" H 6500 3300 50  0001 C CNN
+F 3 "~" H 6500 3300 50  0001 C CNN
+	1    6500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+VDC #PWR01
+U 1 1 5C058119
+P 1850 5400
+F 0 "#PWR01" H 1850 5300 50  0001 C CNN
+F 1 "+VDC" V 1850 5630 50  0000 L CNN
+F 2 "" H 1850 5400 50  0001 C CNN
+F 3 "" H 1850 5400 50  0001 C CNN
+	1    1850 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+VDC #PWR06
+U 1 1 5BECA88D
+P 6900 2200
+F 0 "#PWR06" H 6900 2100 50  0001 C CNN
+F 1 "+VDC" V 6900 2430 50  0000 L CNN
+F 2 "" H 6900 2200 50  0001 C CNN
+F 3 "" H 6900 2200 50  0001 C CNN
+	1    6900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5817 D1
+U 1 1 5C05C543
+P 1550 5500
+F 0 "D1" H 1550 5284 50  0000 C CNN
+F 1 "1N5817" H 1550 5375 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1550 5325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 1550 5500 50  0001 C CNN
+	1    1550 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5BFF5C92
+P 2550 3100
+F 0 "RV1" H 2480 3146 50  0000 R CNN
+F 1 "R_POT" H 2480 3055 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PC-16_Single_Horizontal" H 2550 3100 50  0001 C CNN
+F 3 "~" H 2550 3100 50  0001 C CNN
+	1    2550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5C0573AB
+P 1300 6150
+F 0 "BT1" H 1408 6196 50  0000 L CNN
+F 1 "Battery" H 1408 6105 50  0000 L CNN
+F 2 "40khz:Battery_Keystone_968" V 1300 6210 50  0001 C CNN
+F 3 "~" V 1300 6210 50  0001 C CNN
+	1    1300 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack3_Ground J1
+U 1 1 5C000A4F
+P 8750 3000
+F 0 "J1" H 8517 2929 50  0000 R CNN
+F 1 "AudioJack3_Ground" H 8517 3020 50  0001 R CNN
+F 2 "40khz:TruConnect_3.5mm_StereoSocket" H 8750 3000 50  0001 C CNN
+F 3 "~" H 8750 3000 50  0001 C CNN
+	1    8750 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:L78L05_TO92 U2
+U 1 1 5C0574C2
+P 2700 5500
+F 0 "U2" H 2700 5742 50  0000 C CNN
+F 1 "L78L05_TO92" H 2700 5651 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 5725 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 2700 5450 50  0001 C CNN
+	1    2700 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L local:OP07simple U3
+U 1 1 5BFF30E0
+P 6900 3000
+F 0 "U3" H 7241 3046 50  0000 L CNN
+F 1 "OP07simple" H 7000 2850 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6950 3050 50  0001 C CNN
+F 3 "" H 6950 3150 50  0001 C CNN
+	1    6900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L local:TSOP13xx U1
+U 1 1 5BFFDE81
+P 1550 2700
+F 0 "U1" H 1537 3125 50  0000 C CNN
+F 1 "TSOP13xx" H 1537 3034 50  0000 C CNN
+F 2 "OptoDevice:Vishay_MINIMOLD-3Pin" H 1500 2325 50  0001 C CNN
+F 3 "http://www.micropik.com/PDF/tsop17xx.pdf" H 2200 3000 50  0001 C CNN
+	1    1550 2700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,197 @@
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes #-}
+
+import qualified Data.Text    as T
+import qualified Data.Text.IO as T
+import Text.Printf
+import Data.List.Split
+import NeatInterpolation
+
+data VCurve = VCurve [Double]
+  deriving (Eq, Ord, Show)
+
+data SensorCurve = SensorCurve [Int]
+  deriving (Eq, Ord, Show)
+
+-- All SI units e.g. V not mV
+
+-- what we want
+charges :: [Double]
+charges = [ 1e-9, 3e-9, 1e-8, 3e-8, 1e-7, 3e-7, 1e-6, 3e-6 ]
+
+-- hardware parameters
+led_a, led_b :: Double
+led_a =  55.86e-3
+led_b = 200.58e-3
+
+clk_freq :: Double
+clk_freq = 800e3
+
+max_ticks :: Int
+max_ticks = 10
+
+-- current-voltage curves
+
+current :: Double -> Double
+current v = led_a * v - led_b
+
+voltage :: Double -> Double
+voltage i = (i + led_b) / led_a
+
+-- on time for n ticks
+time :: Int -> Double
+time n = fromIntegral n / clk_freq 
+
+charge :: Double -> Int -> Double
+charge v n = current v * time n
+
+-- return transition voltages for a given charge
+-- per flash
+--
+-- e.g.
+-- Main> vs 3e-9
+-- [3.633727175080559,3.612244897959184,3.6050841389187256,3.601503759398496,0.0]
+--
+-- means: 1 tick upto 3.6337V, 2 ticks up to 3.61224, &c.
+-- the final 0 is to stop us walking off the end of the array
+--
+-- the list of non-zero voltages stops at v_min
+--
+vs :: Double -> VCurve
+vs q = VCurve $ [ v | n <- [ 1..max_ticks-1]
+                , let i = q / time n
+                , let v = voltage i
+                ]
+                ++ [0.0]
+  
+
+------------------------------------------------------------------------
+          
+-- sensor sees half the voltage in mV
+forSensor :: VCurve -> SensorCurve
+forSensor (VCurve vc) = SensorCurve . map (\v -> floor (0.5 * v * 1000.0)) $ vc
+
+-------------------------------------------------------------------------
+
+render :: [Double] -> [ (String, T.Text) ]
+render qs = [ ("h", headerFile)
+            , ("c", sourceFile $ zip qs cs)
+            ]
+  where cs = map (forSensor . vs) qs
+
+sourceFile :: [(Double,SensorCurve)] -> T.Text
+sourceFile qcs = T.intercalate paraBreak
+                [ preamble
+                , source nVs voltArray nCurves curves 
+                ]
+  where allVolts  = concatMap (\(_, SensorCurve c) -> c) qcs
+        voltArray = ppIntArray       allVolts
+        nVs       = ppInt . length $ allVolts
+        offsets   = 0:[i + 1 | (i,t) <- zip [0..] allVolts, t == 0]
+        curves    = ppOffsetArray   $ zipWith (\o (q,_) -> (o,q)) offsets qcs
+        nCurves   = ppInt . length  $ qcs
+
+ppArray' :: Int -> T.Text -> T.Text -> [T.Text] -> T.Text
+ppArray' n sp sp' ts = T.concat [ "{" <> sp', ppAll ts, sp <> "}" ]
+  where ppSub = T.intercalate (","   <> sp) 
+        ppAll = T.intercalate (",\n" <> sp') . map ppSub . chunksOf n
+
+ppInt :: Int -> T.Text
+ppInt = T.pack . show
+
+ppIntArray :: [Int] -> T.Text
+ppIntArray = ppArray' 10 " " " " . map (T.pack . printf "%5d")
+
+ppOffsetArray :: [(Int, Double)] -> T.Text
+ppOffsetArray = ppArray' 10000 "" "  " . map (T.pack . f)
+  where f (i,q) = printf " led_curve_data + %4d   // %0.2g C\n  " i q
+
+source :: T.Text -> T.Text -> T.Text -> T.Text -> T.Text
+source nVs voltArray nCurves curves =
+  [text|
+      #include "ledcurve.h"
+      
+      // main array of times, $nVs entries
+      static const uint16_t led_curve_data[] =
+        $voltArray;
+
+      // number of messages
+      const int n_led_curves = $nCurves;
+
+      // pointers into the array above corresponding to curves for a particular
+      // charge
+      static const uint16_t * const led_curves[] =
+        $curves;
+
+      uint32_t calc_duty_cycle(const uint32_t dc_min, const uint32_t dc_max,
+                               const uint32_t n_curve, const uint16_t voltage)
+      {
+        // if we don't have a sane battery voltage, turn on full
+        // power and bail early.
+        if (voltage == 0)
+          {
+            return(dc_max);
+          }
+
+        uint32_t i_curve = n_curve;
+        if (i_curve >= n_led_curves)
+          {
+            i_curve = n_led_curves - 1;
+          }
+
+        uint32_t i, dc;
+        for(dc = dc_min, i = 0; dc <= dc_max; dc++, i++)
+          {
+            const uint16_t threshold = led_curves[i_curve][i];
+        
+            if (threshold == 0 || threshold <= voltage)
+              {
+                break;
+              }
+          }
+      
+         return(dc);
+      }
+
+  |]
+
+headerFile :: T.Text
+headerFile = T.intercalate paraBreak
+                    [ preamble 
+                    , header
+                    ]
+    
+header :: T.Text
+header =
+    [text|
+#ifndef _LED_MODEL_H_
+#define _LED_MODEL_H_
+
+extern const int n_led_curves;
+
+uint32_t calc_duty_cycle(const uint32_t dc_min, const uint32_t dc_max,
+                         const uint32_t n_curve, const uint16_t voltage);
+
+#endif
+|]
+
+paraBreak :: T.Text
+paraBreak = "\n\n\n"
+    
+preamble :: T.Text
+preamble =
+    [text|
+         /*
+           AUTOGENERATED FILE - DO NOT EDIT IT MANUALLY
+         */
+
+         #include <stdint.h>
+    |]
+      
+
+outSuccess :: FilePath -> [Double] -> IO ()
+outSuccess stem = mapM_ writeStemFile . render
+  where writeStemFile (suffix,txt) = T.writeFile (stem ++ "." ++ suffix) txt
+
+main :: IO ()
+main = outSuccess "ledcurve" charges

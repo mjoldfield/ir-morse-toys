@@ -1,0 +1,308 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6900 3250 6900 3600
+$Comp
+L Device:R_Small R5
+U 1 1 5BFF3E9C
+P 6250 3100
+F 0 "R5" V 6350 3150 50  0000 C CNN
+F 1 "100k" V 6450 3200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6250 3100 50  0001 C CNN
+F 3 "~" H 6250 3100 50  0001 C CNN
+	1    6250 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5BFF40B6
+P 5700 3100
+F 0 "C1" V 5471 3100 50  0000 C CNN
+F 1 "100nF" V 5562 3100 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D10.0mm_W2.5mm_P5.00mm" H 5700 3100 50  0001 C CNN
+F 3 "~" H 5700 3100 50  0001 C CNN
+	1    5700 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3100 5900 3100
+Wire Wire Line
+	7200 2650 7200 3000
+Wire Wire Line
+	6600 2650 6600 2900
+Wire Wire Line
+	6600 2650 7200 2650
+$Comp
+L Device:R_Small R4
+U 1 1 5BFF4D92
+P 6000 2800
+F 0 "R4" H 6059 2846 50  0000 L CNN
+F 1 "100k" H 6059 2755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6000 2800 50  0001 C CNN
+F 3 "~" H 6000 2800 50  0001 C CNN
+	1    6000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5BFF4DFF
+P 5900 3350
+F 0 "R3" H 5950 3400 50  0000 L CNN
+F 1 "100k" H 5950 3300 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5900 3350 50  0001 C CNN
+F 3 "~" H 5900 3350 50  0001 C CNN
+	1    5900 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3250 5900 3100
+Connection ~ 5900 3100
+Wire Wire Line
+	5900 3100 6000 3100
+Wire Wire Line
+	6000 2900 6000 3100
+Connection ~ 6000 3100
+Wire Wire Line
+	6000 3100 6150 3100
+Wire Wire Line
+	5900 3450 5900 3600
+Connection ~ 6900 3600
+$Comp
+L Device:CP_Small C2
+U 1 1 5BFF8512
+P 7650 3000
+F 0 "C2" V 7875 3000 50  0000 C CNN
+F 1 "100u" V 7784 3000 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7650 3000 50  0001 C CNN
+F 3 "~" H 7650 3000 50  0001 C CNN
+	1    7650 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack3_Ground J1
+U 1 1 5C000A4F
+P 8100 3000
+F 0 "J1" H 7867 2929 50  0000 R CNN
+F 1 "AudioJack3_Ground" H 7867 3020 50  0001 R CNN
+F 2 "40khz:TruConnect_3.5mm_StereoSocket" H 8100 3000 50  0001 C CNN
+F 3 "~" H 8100 3000 50  0001 C CNN
+	1    8100 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7900 2900 7900 3000
+Connection ~ 7900 3000
+Wire Wire Line
+	7900 3100 7900 3600
+$Comp
+L Device:Battery BT1
+U 1 1 5C0573AB
+P 8950 2800
+F 0 "BT1" H 9058 2846 50  0000 L CNN
+F 1 "9V PP3" H 9058 2755 50  0000 L CNN
+F 2 "40khz:Battery_Keystone_968" V 8950 2860 50  0001 C CNN
+F 3 "~" V 8950 2860 50  0001 C CNN
+	1    8950 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3000 7550 3000
+Wire Wire Line
+	7750 3000 7900 3000
+Wire Wire Line
+	6350 3100 6600 3100
+Connection ~ 7200 3000
+$Comp
+L local:OP07simple U2
+U 1 1 5BFF30E0
+P 6900 3000
+F 0 "U2" H 7241 3046 50  0000 L CNN
+F 1 "OP07" H 7000 2850 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6950 3050 50  0001 C CNN
+F 3 "" H 6950 3150 50  0001 C CNN
+	1    6900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5D7B4D6A
+P 4400 2200
+F 0 "R1" H 4341 2154 50  0000 R CNN
+F 1 "1k" H 4341 2245 50  0000 R CNN
+F 2 "" H 4400 2200 50  0001 C CNN
+F 3 "~" H 4400 2200 50  0001 C CNN
+	1    4400 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Zener_ALT D1
+U 1 1 5D7B6662
+P 4650 2650
+F 0 "D1" V 4600 2750 50  0000 C CNN
+F 1 "4.7V" V 4700 2800 50  0000 C CNN
+F 2 "" H 4650 2650 50  0001 C CNN
+F 3 "~" H 4650 2650 50  0001 C CNN
+	1    4650 2650
+	0    1    1    0   
+$EndComp
+NoConn ~ 8100 2600
+Wire Wire Line
+	8100 2600 8100 2700
+Connection ~ 5000 2950
+Wire Wire Line
+	5000 2750 5000 2950
+$Comp
+L Device:R_Small R2
+U 1 1 5C1E7B5A
+P 5000 2650
+F 0 "R2" H 5050 2700 50  0000 L CNN
+F 1 "100k" H 5050 2600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5000 2650 50  0001 C CNN
+F 3 "~" H 5000 2650 50  0001 C CNN
+	1    5000 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2300 4400 2400
+Wire Wire Line
+	4400 2950 5000 2950
+Wire Wire Line
+	4400 3150 4400 3600
+$Comp
+L local:TSOP13xx U1
+U 1 1 5BFFDE81
+P 4000 2950
+F 0 "U1" H 3650 2600 50  0000 C CNN
+F 1 "TSOP13xx" H 3800 2500 50  0000 C CNN
+F 2 "OptoDevice:Vishay_MINIMOLD-3Pin" H 3950 2575 50  0001 C CNN
+F 3 "http://www.micropik.com/PDF/tsop17xx.pdf" H 4650 3250 50  0001 C CNN
+	1    4000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2950 5000 3150
+Wire Wire Line
+	5000 3450 5000 3600
+$Comp
+L Device:R_POT RV1
+U 1 1 5BFF5C92
+P 5000 3300
+F 0 "RV1" H 4930 3346 50  0000 R CNN
+F 1 "R_POT" H 4930 3255 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PC-16_Single_Horizontal" H 5000 3300 50  0001 C CNN
+F 3 "~" H 5000 3300 50  0001 C CNN
+	1    5000 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3600 5900 3600
+Connection ~ 5000 3600
+Connection ~ 5900 3600
+Wire Wire Line
+	4400 3600 4650 3600
+Wire Wire Line
+	6900 3600 7900 3600
+Wire Wire Line
+	8950 3000 8950 3600
+Connection ~ 7900 3600
+Wire Wire Line
+	5450 3300 5450 3100
+Wire Wire Line
+	5450 3100 5600 3100
+Wire Wire Line
+	5150 3300 5450 3300
+Wire Wire Line
+	4650 2800 4650 3600
+Connection ~ 4650 3600
+Wire Wire Line
+	4650 3600 5000 3600
+Wire Wire Line
+	4650 2500 4650 2400
+Wire Wire Line
+	4650 2400 4400 2400
+Connection ~ 4400 2400
+Wire Wire Line
+	5000 2400 5000 2550
+Connection ~ 4650 2400
+Wire Wire Line
+	4400 2100 4400 2000
+Connection ~ 6900 2000
+Wire Wire Line
+	6900 2000 6900 2750
+Wire Wire Line
+	6900 2000 8800 2000
+Wire Wire Line
+	8950 2000 8950 2600
+Wire Wire Line
+	6000 2000 6000 2700
+Wire Wire Line
+	4400 2000 6000 2000
+Connection ~ 6000 2000
+Wire Wire Line
+	6000 2000 6900 2000
+Wire Wire Line
+	5900 3600 6900 3600
+Wire Wire Line
+	8950 3600 8800 3600
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5D7FD19B
+P 8800 2000
+F 0 "#FLG02" H 8800 2075 50  0001 C CNN
+F 1 "PWR_FLAG" H 8800 2173 50  0000 C CNN
+F 2 "" H 8800 2000 50  0001 C CNN
+F 3 "~" H 8800 2000 50  0001 C CNN
+	1    8800 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 8800 2000
+Wire Wire Line
+	8800 2000 8950 2000
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5D7FDEFA
+P 8800 3600
+F 0 "#FLG03" H 8800 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 8800 3773 50  0000 C CNN
+F 2 "" H 8800 3600 50  0001 C CNN
+F 3 "~" H 8800 3600 50  0001 C CNN
+	1    8800 3600
+	-1   0    0    1   
+$EndComp
+Connection ~ 8800 3600
+Wire Wire Line
+	8800 3600 7900 3600
+Wire Wire Line
+	4650 2400 4900 2400
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5D800566
+P 4900 2350
+F 0 "#FLG01" H 4900 2425 50  0001 C CNN
+F 1 "PWR_FLAG" H 4900 2523 50  0000 C CNN
+F 2 "" H 4900 2350 50  0001 C CNN
+F 3 "~" H 4900 2350 50  0001 C CNN
+	1    4900 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2350 4900 2400
+Wire Wire Line
+	4400 2400 4400 2750
+Connection ~ 4900 2400
+Wire Wire Line
+	4900 2400 5000 2400
+$EndSCHEMATC

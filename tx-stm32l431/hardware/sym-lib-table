@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name emitter-cache)(type Legacy)(uri ${KIPRJMOD}/emitter-cache.lib)(options "")(descr "")(disabled))
+  (lib (name 00-local)(type Legacy)(uri ${KIPRJMOD}/00-local.lib)(options "")(descr ""))
+)

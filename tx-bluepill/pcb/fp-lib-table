@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name emitter)(type KiCad)(uri ${KIPRJMOD}/emitter.pretty)(options "")(descr ""))
+)

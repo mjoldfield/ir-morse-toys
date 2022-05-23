@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TSOP13xx
+D Photo Modules for PCM Remote Control Systems
+K opto IR receiver
+F http://www.micropik.com/PDF/tsop17xx.pdf
+$ENDCMP
+#
+#End Doc Library

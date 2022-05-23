@@ -1,0 +1,38 @@
+Wire links
+
+W1  J30  -
+W2  H28 H25
+W3  E2  F2
+
+U1  A2 A3 A4
+
+U2  F21 to E18
+
+R1  C4   +
+
+R2  B2  B4
+R3  I12  -
+R4  F12  +
+R5  G12 G19
+
+D1  D3  D4
+
+C1  F4  H12
+
+C2  B19 F25
+
+VR1 J2 J4 J6
+
+J1  F28 G28 H30 I28 J28
+
+W4  E3  -
+W5  F6  -
+W6  G18 -
+W7  D20 +
+W8  F20 D19
+
+B1  
+
+
+
+

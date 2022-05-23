@@ -1,0 +1,21 @@
+All links, 5% duty cycle at start i.e. one-tenth power
+
+Newish AAA Duracell 'Ultrapower' cells
+
+Start time 00:38
+ 
+2019-10-16 00:38 3160 0      0
+2019-10-16 10:58 3028 7      1
+2019-10-19 09:30 2853 2     81
+2019-10-25 16:14 2694 9    232
+2019-10-30 14:25 2622 8    350
+2019-11-06 14:00 2478 9    517
+2019-11-10 18:42 2323 0    618
+2019-11-18 13:10 2038 7    805
+2019-11-20 17:35 1980 2    857
+2019-12-04 17:37 1881 2   1193
+2019-12-15 20:14 dead     1460
+
+
+So a reasonably conservative lifetime estimate is about roughly 1200
+hours or 50 days: about six times longer than in full-power.

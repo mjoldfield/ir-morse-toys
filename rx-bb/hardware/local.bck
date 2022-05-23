@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TSOP13xx
+D Photo Modules for PCM Remote Control Systems
+K opto IR receiver
+F http://www.micropik.com/PDF/tsop17xx.pdf
+$ENDCMP
+#
+$CMP TSOP17xx
+D Photo Modules for PCM Remote Control Systems
+K opto IR receiver
+F http://www.micropik.com/PDF/tsop17xx.pdf
+$ENDCMP
+#
+$CMP TSOP312xx
+D Photo Modules for PCM Remote Control Systems
+K opto IR receiver
+F http://www.vishay.com/docs/82492/tsop312.pdf
+$ENDCMP
+#
+$CMP TSOP314xx
+D Photo Modules for PCM Remote Control Systems
+K opto IR receiver
+F http://www.vishay.com/docs/82492/tsop312.pdf
+$ENDCMP
+#
+#End Doc Library
