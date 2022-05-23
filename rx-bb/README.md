@@ -1,5 +1,5 @@
 # A Detector for the Breadboad
 
-![The device](https://mjoldfield.com/atelier/atelier-dest/2022/01/det-bb.jpg)
+<img src="https://mjoldfield.com/atelier/2022/01/det-bb.jpg" width="512">
 
-You can read more on [my website](https://mjoldfield.com/atelier/atelier-dest/2022/01/rx-bb.html).
+You can read more on [my website](https://mjoldfield.com/atelier/2022/01/rx-bb.html).
