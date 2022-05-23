@@ -1,4 +1,4 @@
-# A STM32L431 based emitted
+# A STM32L431 based emitter
 
 <img src="https://mjoldfield.com/atelier/2022/01/em-bb-back.jpg" width="640">
 
