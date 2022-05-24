@@ -19,12 +19,15 @@ There are three steps:
   1. Install [libopencm3](https://libopencm3.org):
 
 		$ git submodule init
+		
 		$ git submodule upgrade
+
 		$ make -C libopencm3
 
   1. Compile the firmware
 
 		$ make -C tx-bluepill/firmware
+
 		$ make -C tx-stm32l431/firmware
 
 The libopencm3-rules.mk file contains a number of fake targets to flash the firmware.
